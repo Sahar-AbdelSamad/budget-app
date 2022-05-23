@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :categories, foreign_key: 'user_id', class_name: 'Category'
+  has_many :categories, foreign_key: 'author_id', class_name: 'Category'
   validates :fullname, presence: true
   validates :email, presence: true
   validates :password, presence: true
