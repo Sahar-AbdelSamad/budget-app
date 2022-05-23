@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   def create
     @user = current_user
     @category = Category.new(category_params)
-    @category.user_id = @user.id
+    @category.author_id = @user.id
     respond_to do |format|
       if @category.save!
         format.html do

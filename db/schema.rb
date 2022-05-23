@@ -17,10 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_160803) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
-    t.integer "user_id"
+    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
+    t.index ["author_id"], name: "index_categories_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,5 +36,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_160803) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "categories", "users"
+  add_foreign_key "categories", "users", column: "author_id"
 end
