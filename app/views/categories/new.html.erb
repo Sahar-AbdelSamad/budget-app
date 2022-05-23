@@ -1,2 +1,18 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<h1>Add a new Category</h1>
+<%= form_with(scope: :categories, url: categories_path(@user), method: :post, local: true) do |f| %>
+
+  <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+  
+  <div>
+    <%= f.label :icon %><br />
+    <%= f.text_field :icon, autofocus: true, autocomplete: "icon" %>
+  </div>
+
+  <div>
+    <%= f.submit "Save" %>
+  </div>
+
+<%end%>
