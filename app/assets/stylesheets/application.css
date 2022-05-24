@@ -18,6 +18,8 @@
   border: none;
   background-color: #3471b6;
   color: white;
+  font-size: medium;
+  cursor: pointer;
 }
 
 .forgot-password {
@@ -51,8 +53,12 @@ a {
   background-color: white;
 }
 
-.container {
+.container,
+.container-devise {
   background-color: #dee0df;
+}
+
+.container-devise {
   height: 100vh;
 }
 
@@ -79,6 +85,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.splash {
+  background-color: #3979c3;
 }
 
 .new-category {
@@ -120,4 +130,22 @@ a {
 .field {
   display: flex;
   align-items: center;
+}
+
+.splash-page {
+  background-color: white;
+  height: 100vh;
+}
+
+.app-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #1f262f;
+}
+
+.splash-signup {
+  background-color: white;
+  color: #525151a2;
 }

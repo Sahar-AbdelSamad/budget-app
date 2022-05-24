@@ -1,16 +1,18 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <nav>
-    <ul class='nav'>
-      <li><%= link_to '<', '#' %></li>
-      <li>REGISTER</li>
-      <li><%= f.submit "Next", class: 'next' %></li>
-    </ul>
-  </nav>
-  <div class='form-category'>
-    <%= f.text_field :fullname, autofocus: true, autocomplete: "fullname", placeholder: 'Full name' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password (6 characters minimum)' %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation' %>
+<div class='container-devise'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <nav>
+      <ul class='nav'>
+        <li><%= link_to '<', root_path %></li>
+        <li>REGISTER</li>
+        <li><%= f.submit "Next", class: 'next' %></li>
+      </ul>
+    </nav>
+    <div class='form-category'>
+      <%= f.text_field :fullname, autofocus: true, autocomplete: "fullname", placeholder: 'Full name' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password (6 characters minimum)' %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation' %>
+    </div>
+  <% end %>
   </div>
-<% end %>
