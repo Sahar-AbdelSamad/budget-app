@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+.next {
+  border: none;
+  background-color: #3471b6;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #7e7e7e;
+  display: flex;
+  justify-content: center;
+  background-color: #dee0df;
+  font-size: small;
+  margin-top: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  background-color: #3471b6;
+  margin: 0;
+  padding: 0 2rem;
+  height: 4rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.user {
+  height: 2rem;
+  background-color: white;
+}
+
+.container,
+.container-devise {
+  background-color: #dee0df;
+}
+
+.container-devise {
+  height: 100vh;
+}
+
+.category {
+  background-color: white;
+  display: flex;
+  margin: 1rem;
+  height: 4rem;
+  list-style-type: none;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.category-name {
+  margin-left: 1rem;
+}
+
+.total {
+  margin-left: auto;
+}
+
+.btn {
+  background-color: #60b524;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash {
+  background-color: #3979c3;
+}
+
+.new-category {
+  height: 2.5rem;
+  width: 92vw;
+  border: 1px solid white;
+}
+
+.add-category {
+  height: 4rem;
+  width: 100%;
+  border: none;
+}
+
+.save-category {
+  padding: 8px 20px;
+  color: white;
+  border: none;
+}
+
+.form-category {
+  background-color: white;
+  margin-top: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.form-category > * {
+  width: 95vw;
+  display: block;
+  padding: 0;
+  padding-left: 0.5rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  height: 2.5rem;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+}
+
+.splash-page {
+  background-color: white;
+  height: 100vh;
+}
+
+.app-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #1f262f;
+}
+
+.splash-signup {
+  background-color: white;
+  color: #525151a2;
+}

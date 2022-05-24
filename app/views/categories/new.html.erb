@@ -1,0 +1,11 @@
+<% provide(:title, "Add new Category") %>
+
+  <%= form_with(scope: :categories, url: categories_path(@user), method: :post, local: true) do |f| %>
+
+<div class='form-category'>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Category Name" %>
+  <%= f.text_field :icon, autofocus: true, autocomplete: "icon", placeholder: "Category Icon" %>
+  <%= f.submit "Save", class: 'btn save-category' %>
+
+  <%end%>
+</div>
