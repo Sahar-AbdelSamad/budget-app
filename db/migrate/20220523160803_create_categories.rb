@@ -3,7 +3,8 @@ class CreateCategories < ActiveRecord::Migration[7.0]
     create_table :categories do |t|
       t.string :name
       t.string :icon
-      t.integer :author_id
+      t.decimal :total
+      t.bigint :author_id, null: false
 
       t.timestamps
     end

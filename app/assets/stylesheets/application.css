@@ -13,6 +13,27 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: "ProximaBold";
+  src: url(/fonts/ProximaBold.otf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "ProximaLight";
+  src: url(/fonts/ProximaLight.otf) format("truetype");
+  font-weight: lighter;
+}
+
+body {
+  font-family: "ProximaBold", serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .next {
   border: none;
@@ -23,18 +44,15 @@
 }
 
 .forgot-password {
-  color: #7e7e7e;
-  display: flex;
-  justify-content: center;
+  font-family: "ProximaLight", serif;
+  color: #434b54;
   background-color: #dee0df;
   font-size: small;
   margin-top: 1rem;
 }
 
 .nav {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   list-style-type: none;
   background-color: #3471b6;
   margin: 0;
@@ -63,32 +81,37 @@ a {
 }
 
 .category {
+  font-family: "ProximaLight", serif;
   background-color: white;
-  display: flex;
   margin: 1rem;
   height: 4rem;
   list-style-type: none;
-  align-items: center;
   padding: 0 1rem;
 }
 
 .category-name {
-  margin-left: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  color: #434b54;
+  font-size: small;
+  padding: 0;
+  height: 4rem;
+  justify-content: space-around;
 }
 
 .total {
+  font-family: "ProximaLight", serif;
   margin-left: auto;
+  color: #434b54;
 }
 
 .btn {
-  background-color: #60b524;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #5fb523;
 }
 
 .splash {
-  background-color: #3979c3;
+  background-color: #3778c2;
 }
 
 .new-category {
@@ -110,26 +133,24 @@ a {
 }
 
 .form-category {
+  font-family: "ProximaLight", serif;
   background-color: white;
   margin-top: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.116);
 }
 
 .form-category > * {
+  font-family: "ProximaLight", serif;
   width: 95vw;
   display: block;
   padding: 0;
   padding-left: 0.5rem;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  border: 1px solid rgba(0, 0, 0, 0.116);
   height: 2.5rem;
   box-sizing: border-box;
   margin: auto;
-}
-
-.field {
-  display: flex;
-  align-items: center;
+  color: #434b54;
 }
 
 .splash-page {
@@ -138,14 +159,22 @@ a {
 }
 
 .app-name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 70vh;
-  color: #1f262f;
+  color: #434b54;
 }
 
 .splash-signup {
   background-color: white;
-  color: #525151a2;
+  color: #434b54;
+}
+
+.category-transactions {
+  margin: 0 1rem;
+  color: #434b54;
+}
+
+.icon-size {
+  margin-right: 0.3rem;
+  height: 4rem;
+  width: 4rem;
 }

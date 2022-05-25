@@ -1,5 +1,14 @@
-<ul class='category'>
-  <li><%= category.icon %></li>
-  <li class='category-name'><%= category.name %></li>
-  <li class='total'>Total</li>
-</ul>
+<%= link_to category_payments_path(category) do %>
+<div class='category flex'>
+  <% if category.icon.attached? %>
+  <img class='icon-size' src="<%= url_for(category.icon) %>">
+  <% end %>
+  <ul class='category-name flex'>
+    <li><%= category.name %></li>
+    <li><%= category.created_at.strftime("%d %b %Y") %></li>
+  </ul>
+  <div class='total'>
+    Total: <%= category.total %>$
+  </div>
+</div>
+<%end%>

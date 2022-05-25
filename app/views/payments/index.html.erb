@@ -1,0 +1,33 @@
+<header>
+  <div>
+  <% if user_signed_in? %>
+    <nav>
+      <ul class='nav flex'>
+        <li><%= link_to '<', root_path %></li>
+        <li>Transactions</li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete%></li>
+      </ul>
+    </nav>
+		<%end%>
+  </div>
+</header>
+
+<div class='category-transactions flex'>
+<% if @category.icon.attached? %>
+  <img class='icon-size' src="<%= url_for(@category.icon) %>">
+<% end %>
+<%= @category.name %>
+<div class='total'>Total: <%= @category.total %>$</div>
+</div>
+
+<div>
+  <% @category_payments.each do |payment| %>
+    <%= render payment.payment %>
+  <% end %>
+</div>
+
+<button class='add-category btn flex'>
+  <div class='new-category btn flex'>
+  <%= link_to "Add a new Transaction", "/categories/#{@category.id}/payments/new" %>
+  <div>
+</button>
