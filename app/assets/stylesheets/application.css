@@ -73,11 +73,17 @@ a {
 }
 
 .category-name {
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  color: #555e67;
+  font-size: small;
+  padding: 0;
 }
 
 .total {
   margin-left: auto;
+  color: #434c55;
 }
 
 .btn {
@@ -148,4 +154,10 @@ a {
 .splash-signup {
   background-color: white;
   color: #525151a2;
+}
+
+.category-transactions {
+  display: flex;
+  margin: 0 1rem;
+  padding-top: 1rem;
 }
