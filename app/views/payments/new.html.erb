@@ -1,23 +1,10 @@
-<div>
-  <%= form_with url: category_payments_path, method: :post do |f| %>
+<% provide(:title, "New Transaction") %>
+<%= form_with url: category_payments_path, method: :post do |f| %>
 
-  <div>
-    <div>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', required: true %>
-    </div>
-    <hr>
-    <div>
-      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', required: true %>
-    </div>
-    <div>
-      <%= f.label :categories, "Categories" %>
-      <div>
-      <%= f.select :categories, @categories.map { |category| [category.name, category.id] }, required: true %>
-      </div>
-      <%= f.submit "Save"%>
-    </div>
-  </div>
-
+  <div class='form-category'>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', required: true %>
+    <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', required: true %>
+    <%= f.select :categories, @categories.map { |category| [category.name, category.id] }, required: true %>
+    <%= f.submit "Save", class: 'btn save-category' %>
   <% end %>
-
 </div>

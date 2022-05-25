@@ -76,7 +76,7 @@ a {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  color: #555e67;
+  color: #494d52;
   font-size: small;
   padding: 0;
 }
@@ -116,6 +116,7 @@ a {
 }
 
 .form-category {
+  align-items: center;
   background-color: white;
   margin-top: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.116);
@@ -158,6 +159,18 @@ a {
 
 .category-transactions {
   display: flex;
+  align-items: center;
   margin: 0 1rem;
-  padding-top: 1rem;
+  color: #494d52;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon-size {
+  margin-right: 0.3rem;
+  height: 4rem;
+  width: 4rem;
 }

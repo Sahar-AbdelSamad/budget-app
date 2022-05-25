@@ -1,7 +1,9 @@
 <% provide(:title, "Transactions") %>
 
 <div class='category-transactions'>
-<%= @category.icon %>
+<% if @category.icon.attached? %>
+  <img class='icon-size' src="<%= url_for(@category.icon) %>">
+<% end %>
 <%= @category.name %>
 <div class='total'>Total: <%= @category.total %>$</div>
 </div>

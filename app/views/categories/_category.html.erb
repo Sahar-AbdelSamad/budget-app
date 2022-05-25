@@ -1,12 +1,14 @@
 <%= link_to category_payments_path(category) do %>
 <div class='category'>
-<%= category.icon %>
-<ul class='category-name'>
-  <li><%= category.name %></li>
-  <li><%= category.created_at.strftime("%d %b %Y") %></li>
-</ul>
-<div class='total'>
-  Total: <%= category.total %>$
-</div>
+  <% if category.icon.attached? %>
+  <img class='icon-size' src="<%= url_for(category.icon) %>">
+  <% end %>
+  <ul class='category-name'>
+    <li><%= category.name %></li>
+    <li><%= category.created_at.strftime("%d %b %Y") %></li>
+  </ul>
+  <div class='total'>
+    Total: <%= category.total %>$
+  </div>
 </div>
 <%end%>
