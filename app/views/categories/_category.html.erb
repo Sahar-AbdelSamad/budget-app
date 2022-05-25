@@ -1,5 +1,12 @@
-<ul class='category'>
-  <li><%= category.icon %></li>
-  <li class='category-name'><%= category.name %></li>
-  <li class='total'>Total</li>
+<%= link_to category_payments_path(category) do %>
+<div class='category'>
+<%= category.icon %>
+<ul class='category-name'>
+  <li><%= category.name %></li>
+  <li><%= category.created_at.strftime("%d %b %Y") %></li>
 </ul>
+<div class='total'>
+  Total: 
+</div>
+</div>
+<%end%>
