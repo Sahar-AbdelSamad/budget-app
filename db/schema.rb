@@ -10,17 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_23_160803) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_203503) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "icon"
-    t.integer "author_id"
+    t.string "name", null: false
+    t.string "icon", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_categories_on_author_id"
+  end
+
+  create_table "category_payments", force: :cascade do |t|
+    t.bigint "payment_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_payments_on_category_id"
+    t.index ["payment_id"], name: "index_category_payments_on_payment_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "name", null: false
+    t.decimal "amount", null: false
+    t.bigint "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_payments_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,4 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_160803) do
   end
 
   add_foreign_key "categories", "users", column: "author_id"
+  add_foreign_key "category_payments", "categories"
+  add_foreign_key "category_payments", "payments"
+  add_foreign_key "payments", "users", column: "author_id"
 end
