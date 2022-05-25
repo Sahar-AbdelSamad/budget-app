@@ -1,9 +1,9 @@
-<div class='category'>
-<ul class='category-name'>
+<div class='category flex'>
+<ul class='category-name flex'>
   <li><%= payment.name %></li>
   <li><%= payment.created_at.strftime("%d %b %Y") %></li>
 </ul>
 <div class='total'>
-  <%= payment.amount %>
+  <%= payment.amount %>$
 </div>
 </div>

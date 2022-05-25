@@ -4,7 +4,7 @@
 
 <div class='form-category'>
   <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Category Name", required: true %>
-  <div class='icon'><%= f.file_field :icon, required: true %></div>
-  <%= f.submit "Save", class: 'btn save-category' %>
+  <div class='flex'><%= f.file_field :icon, required: true %></div>
+  <%= f.submit "Save", class: 'btn save-category flex' %>
   <%end%>
 </div>

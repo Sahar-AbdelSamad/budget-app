@@ -2,7 +2,7 @@
   <div>
   <% if user_signed_in? %>
     <nav>
-      <ul class='nav'>
+      <ul class='nav flex'>
         <li><%= link_to '<', category_payments_path(params[:category_id]) %></li>
         <li>New Transaction</li>
         <li><%= link_to 'Log out', destroy_user_session_path, method: :delete%></li>
@@ -17,6 +17,6 @@
     <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', required: true %>
     <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', required: true %>
     <%= f.select :categories, @categories.map { |category| [category.name, category.id] }, required: true %>
-    <%= f.submit "Save", class: 'btn save-category' %>
+    <%= f.submit "Save", class: 'btn save-category flex' %>
   <% end %>
 </div>

@@ -1,9 +1,9 @@
 <%= link_to category_payments_path(category) do %>
-<div class='category'>
+<div class='category flex'>
   <% if category.icon.attached? %>
   <img class='icon-size' src="<%= url_for(category.icon) %>">
   <% end %>
-  <ul class='category-name'>
+  <ul class='category-name flex'>
     <li><%= category.name %></li>
     <li><%= category.created_at.strftime("%d %b %Y") %></li>
   </ul>
