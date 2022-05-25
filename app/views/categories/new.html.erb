@@ -3,8 +3,8 @@
 <%= form_with(scope: :categories, url: categories_path(@user), method: :post, local: true) do |f| %>
 
 <div class='form-category'>
-  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Category Name" %>
-  <div class='icon'><%= f.file_field :icon %></div>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Category Name", required: true %>
+  <div class='icon'><%= f.file_field :icon, required: true %></div>
   <%= f.submit "Save", class: 'btn save-category' %>
   <%end%>
 </div>

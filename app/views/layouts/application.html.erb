@@ -11,7 +11,9 @@
   </head>
 
   <body>
+    <%- if controller_name != 'payments' %>
     <%= render 'layouts/header' %>
+    <% end %>
     <div class='container'>
     <%= notice %>
     <%= alert %>

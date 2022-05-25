@@ -1,4 +1,16 @@
-<% provide(:title, "New Transaction") %>
+<header>
+  <div>
+  <% if user_signed_in? %>
+    <nav>
+      <ul class='nav'>
+        <li><%= link_to '<', category_payments_path(params[:category_id]) %></li>
+        <li>New Transaction</li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete%></li>
+      </ul>
+    </nav>
+		<%end%>
+  </div>
+</header>
 <%= form_with url: category_payments_path, method: :post do |f| %>
 
   <div class='form-category'>
