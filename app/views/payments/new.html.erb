@@ -3,11 +3,11 @@
 
   <div>
     <div>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name' %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', required: true %>
     </div>
     <hr>
     <div>
-      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount' %>
+      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', required: true %>
     </div>
     <div>
       <%= f.label :categories, "Categories" %>
