@@ -1,0 +1,19 @@
+<% provide(:title, "Transactions") %>
+
+<div class='category-transactions'>
+<%= @category.icon %>
+<%= @category.name %>
+<div class='total'>Total: </div>
+</div>
+
+<div>
+  <% @category_payments.each do |payment| %>
+    <%= render payment.payment %>
+  <% end %>
+</div>
+
+<button class='add-category btn'>
+  <div class='new-category btn'>
+  <%= link_to "Add a new Transaction", "/categories/#{@category.id}/payments/new" %>
+  <div>
+</button>

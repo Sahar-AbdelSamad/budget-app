@@ -1,0 +1,23 @@
+<div>
+  <%= form_with url: category_payments_path, method: :post do |f| %>
+
+  <div>
+    <div>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name' %>
+    </div>
+    <hr>
+    <div>
+      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount' %>
+    </div>
+    <div>
+      <%= f.label :categories, "Categories" %>
+      <div>
+      <%= f.select :categories, @categories.map { |category| [category.name, category.id] }, required: true %>
+      </div>
+      <%= f.submit "Save"%>
+    </div>
+  </div>
+
+  <% end %>
+
+</div>
