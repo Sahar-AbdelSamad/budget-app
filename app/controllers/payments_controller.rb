@@ -2,7 +2,8 @@ class PaymentsController < ApplicationController
   load_and_authorize_resource
   def index
     @category = Category.find(params[:category_id])
-    @category_payments = CategoryPayment.includes(:payment).where(category_id: params[:category_id]).order(created_at: :desc)
+    @category_payments = CategoryPayment.includes(:payment)
+      .where(category_id: params[:category_id]).order(created_at: :desc)
   end
 
   def new
@@ -17,7 +18,10 @@ class PaymentsController < ApplicationController
       if @payment.save
         category_payment = CategoryPayment.new(category_id: params[:categories], payment_id: @payment.id)
         category_payment.save
-        format.html { redirect_to category_payments_path(category_id: params[:categories]), notice: 'Transaction created successfully' }
+        format.html do
+          redirect_to category_payments_path(category_id: params[:categories]),
+                      notice: 'Transaction created successfully'
+        end
       else
         format.html { render :new, alert: 'Failed to create transaction' }
       end
