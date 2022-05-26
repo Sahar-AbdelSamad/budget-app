@@ -4,15 +4,19 @@
 
 ![UML class diagram](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
 
-### Preview
-
-![This is gif of our project](screenshot.gif)
-
 ## Built With
 
 - _**Ruby**_
 - _**Rails**_
 - _**PostgreSQL**_
+
+### Preview
+
+![This is gif of our project](screenshot.gif)
+
+## Live Demo
+
+[Live Demo Link](https://thawing-sierra-32352.herokuapp.com/)
 
 ## Getting Started
 
@@ -59,3 +63,7 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+[Original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
