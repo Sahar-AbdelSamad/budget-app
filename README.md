@@ -12,11 +12,15 @@
 
 ### Preview
 
-![This is gif of our project](screenshot.gif)
+![This is a gif of the project](screenshot.gif)
+
+## Video
+
+[Here's a video presenting the features of the project](https://www.loom.com/share/8d4c963434054328a340a26d6beea198)
 
 ## Live Demo
 
-[Live Demo Link](https://thawing-sierra-32352.herokuapp.com/)
+[Live Demo Link](https://my-budget-sahar.herokuapp.com/)
 
 ## Getting Started
 
