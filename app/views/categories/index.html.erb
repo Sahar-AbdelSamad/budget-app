@@ -1,0 +1,14 @@
+<% provide(:title, "CATEGORIES") %>
+<p class='user'><%= "Welcome #{current_user.fullname}" %></p>
+
+<div class='item'>
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+
+<button class='add-category btn flex'>
+<div class='new-category btn flex'>
+  <%= link_to "Add a new Category", new_category_path %>
+  <div>
+</button>

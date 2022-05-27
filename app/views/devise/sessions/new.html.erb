@@ -1,0 +1,18 @@
+<div class='container'>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {"data-turbo": "false"}) do |f| %>
+  <nav>
+    <ul class='nav flex'>
+      <li><%= link_to '<', root_path %></li>
+      <li>LOGIN</li>
+      <li><%= f.submit "Log In", class: 'next' %></li>
+    </ul>
+  </nav>
+  <div class='form-category'>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+  </div>
+<% end %>
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class: 'flex forgot-password' %><br />
+<% end %>
+</div>

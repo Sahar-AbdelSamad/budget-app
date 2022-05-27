@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+  font-family: "ProximaBold";
+  src: url('ProximaBold.otf') format("truetype");
+  font-size: medium;
+}
+
+@font-face {
+  font-family: "ProximaLight";
+  src: url('ProximaLight.otf') format("truetype");
+  font-weight: lighter;
+}
+
+body {
+  font-family: "ProximaBold", sans-serif;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next {
+  border: none;
+  background-color: #3471b6;
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.forgot-password {
+  font-family: "ProximaLight", sans-serif;
+  color: #434b54;
+  background-color: #dee0df;
+  font-size: small;
+  margin-top: 1rem;
+}
+
+.nav {
+  justify-content: space-between;
+  list-style-type: none;
+  background-color: #3471b6;
+  margin: 0;
+  padding: 0 2rem;
+  height: 4rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.user {
+  height: 2rem;
+  background-color: white;
+  padding-left: 1rem;
+}
+
+.container,
+.container-devise {
+  background-color: #dee0df;
+  height: 100vh;
+}
+
+.category {
+  font-family: "ProximaLight", sans-serif;
+  background-color: white;
+  margin: 1rem;
+  height: 4rem;
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
+.category-name {
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  color: #434b54;
+  font-size: small;
+  padding: 0;
+  height: 4rem;
+  justify-content: space-around;
+}
+
+.total {
+  font-family: "ProximaLight", sans-serif;
+  margin-left: auto;
+  color: #434b54;
+}
+
+.btn {
+  background-color: #5fb523;
+}
+
+.splash {
+  background-color: #3778c2;
+}
+
+.new-category {
+  height: 2.5rem;
+  width: 92vw;
+  border: 1px solid white;
+}
+
+.add-category {
+  height: 4rem;
+  width: 100%;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  font-size: medium;
+}
+
+.item {
+  padding-bottom: 4.5rem;
+  background-color: #dee0df;
+}
+
+.form-category {
+  font-family: "ProximaLight", sans-serif;
+  background-color: white;
+  margin-top: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.form-category > * {
+  font-family: "ProximaLight", sans-serif;
+  width: 100vw;
+  display: block;
+  padding: 0;
+  padding-left: 0.5rem;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.116);
+  height: 2.5rem;
+  box-sizing: border-box;
+  margin: auto;
+  color: #434b54;
+}
+
+.save-category {
+  padding: 8px 20px;
+  color: white;
+  border: none;
+}
+
+.splash-page {
+  background-color: white;
+  height: 100vh;
+}
+
+.app-name {
+  height: 70vh;
+  color: #434b54;
+}
+
+.splash-signup {
+  background-color: white;
+  color: #434b54;
+}
+
+.category-transactions {
+  margin: 0 1rem;
+  color: #434b54;
+}
+
+.icon-size {
+  margin-right: 0.3rem;
+  height: 4rem;
+  width: 4rem;
+}
