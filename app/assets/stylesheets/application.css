@@ -16,7 +16,7 @@
 @font-face {
   font-family: "ProximaBold";
   src: url('ProximaBold.otf') format("truetype");
-  font-weight: bold;
+  font-size: medium;
 }
 
 @font-face {
@@ -40,8 +40,8 @@ body {
   border: none;
   background-color: #3471b6;
   color: white;
-  font-size: medium;
   cursor: pointer;
+  font-size: medium;
 }
 
 .forgot-password {
