@@ -1,10 +1,10 @@
-<% provide(:title, "New Category") %>
+<% provide(:title, "NEW CATEGORY") %>
 
 <%= form_with(scope: :categories, url: categories_path(@user), method: :post, local: true) do |f| %>
 
 <div class='form-category'>
   <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Category Name", required: true %>
   <div class='flex'><%= f.file_field :icon, required: true %></div>
-  <%= f.submit "Save", class: 'btn save-category flex' %>
+  <%= f.submit "SAVE", class: 'btn save-category flex' %>
   <%end%>
 </div>

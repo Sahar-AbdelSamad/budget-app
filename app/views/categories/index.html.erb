@@ -1,7 +1,7 @@
-<% provide(:title, "Categories") %>
+<% provide(:title, "CATEGORIES") %>
 <p class='user'><%= "Welcome #{current_user.fullname}" %></p>
 
-<div>
+<div class='item'>
   <% @categories.each do |category| %>
     <%= render category %>
   <% end %>

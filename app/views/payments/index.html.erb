@@ -4,7 +4,7 @@
     <nav>
       <ul class='nav flex'>
         <li><%= link_to '<', root_path %></li>
-        <li>Transactions</li>
+        <li>TRANSACTIONS</li>
         <li><%= link_to 'Log out', destroy_user_session_path, method: :delete%></li>
       </ul>
     </nav>
@@ -20,7 +20,7 @@
 <div class='total'>Total: <%= @category.total %>$</div>
 </div>
 
-<div>
+<div class='item'>
   <% @category_payments.each do |payment| %>
     <%= render payment.payment %>
   <% end %>
