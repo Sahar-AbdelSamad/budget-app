@@ -21,7 +21,7 @@ RSpec.describe 'categories/index.html.erb', type: :feature do
     end
 
     it 'shoud show the categories page' do
-      expect(page).to have_content('Categories')
+      expect(page).to have_content('CATEGORIES')
     end
 
     it 'should show all the category name Utilities' do

@@ -24,7 +24,7 @@ RSpec.describe 'categories/new.html.erb', type: :feature do
     end
 
     it 'shoud show the add a new transactions page' do
-      expect(page).to have_content('New Transaction')
+      expect(page).to have_content('NEW TRANSACTION')
     end
 
     it 'shoud have a name and amount inputs' do
@@ -36,7 +36,7 @@ RSpec.describe 'categories/new.html.erb', type: :feature do
     end
 
     it 'shoud have a save button' do
-      expect(page).to have_button('Save')
+      expect(page).to have_button('SAVE')
     end
   end
 end

@@ -23,11 +23,11 @@ RSpec.describe 'categories/new.html.erb', type: :feature do
     end
 
     it 'shoud show the add a new category page' do
-      expect(page).to have_content('New Category')
+      expect(page).to have_content('NEW CATEGORY')
     end
 
     it 'shoud have a save button' do
-      expect(page).to have_button('Save')
+      expect(page).to have_button('SAVE')
     end
   end
 end

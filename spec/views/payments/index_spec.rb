@@ -30,7 +30,7 @@ RSpec.describe 'payments/index.html.erb', type: :feature do
     end
 
     it 'shoud show the transactions page' do
-      expect(page).to have_content('Transactions')
+      expect(page).to have_content('TRANSACTIONS')
     end
 
     it 'should show Rent transaction name' do
