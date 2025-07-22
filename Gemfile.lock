@@ -214,7 +214,7 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.3)
-    thor (1.2.1)
+    thor (1.4.0)
     timeout (0.2.0)
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
